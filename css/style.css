@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+.wrapper{
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.accordion{
+    background-color: #eee;
+    border: none;
+    outline: none;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    cursor: pointer;
+    color: #595959;
+}
+.active, .accordion:hover{
+    background-color: #ccc;
+    color: #000;
+}
+.panel_container{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+    -webkit-transition: max-height 0.4s ease-out;
+    -moz-transition: max-height 0.4s ease-out;
+    -ms-transition: max-height 0.4s ease-out;
+    -o-transition: max-height 0.4s ease-out;
+}
+.panel__item{
+    background-color: white;
+    padding: 18px;
+}
+.accordion::after{
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.accordion.active::after{
+    content: '\2212';
+}
+
+.accordion:not(:first-child){
+    margin-top: 20px;
+}
+.toggle__btn{
+    margin-bottom: 10px;
+    padding: 7px 12px;
+    background-color: #595959;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.toogle__btn.active, .toogle__btn:hover{
+    background-color: #000;
+}
